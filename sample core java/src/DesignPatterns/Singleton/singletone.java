@@ -1,18 +1,18 @@
-package DesignPatterns;
+package DesignPatterns.Singleton;
 
 public class singletone {
 
 	public static void main(String[] args) {
 		
-			ei ei1= ei.getinstance();
-			ei ei2= ei.getinstance();
+			EagerInitialization ei1= EagerInitialization.getinstance();
+			EagerInitialization ei2= EagerInitialization.getinstance();
 			System.out.println(ei1==ei2);
 			
 			
 			
 			
-			sbi s1= sbi.getInstance();
-			sbi s2 =sbi.getInstance();
+			StaticBlockInitialization s1= StaticBlockInitialization.getInstance();
+			StaticBlockInitialization s2 =StaticBlockInitialization.getInstance();
 			System.out.println(s1==s2);
 			Lazyini l1=Lazyini.getInstance();
 			Lazyini l2=Lazyini.getInstance();

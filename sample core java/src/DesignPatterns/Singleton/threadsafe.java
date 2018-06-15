@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.Singleton;
 
 public class threadsafe {
 

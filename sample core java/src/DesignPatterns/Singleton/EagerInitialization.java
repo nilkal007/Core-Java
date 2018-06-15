@@ -1,14 +1,14 @@
-package DesignPatterns;
+package DesignPatterns.Singleton;
 
-public class ei//eagarInitialization
+public class EagerInitialization
 {
 
-	private static final ei instanceobj =new ei();
+	private static final EagerInitialization instanceobj =new EagerInitialization();
 
-	private ei() {		
+	private EagerInitialization() {		
 	}
 	
-	public static ei getinstance() {
+	public static EagerInitialization getinstance() {
 		return instanceobj; 
 	}
 			

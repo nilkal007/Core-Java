@@ -1,16 +1,16 @@
-package DesignPatterns;
+package DesignPatterns.Singleton;
 
 import java.lang.reflect.Constructor;
 
 public class Reflection {
 	public static void main(String[] args) {
-	ei ei1= ei.getinstance();
-	ei ei2=null;
+	EagerInitialization ei1= EagerInitialization.getinstance();
+	EagerInitialization ei2=null;
 	try {
-		Constructor[] constructor1=ei.class.getDeclaredConstructors();
+		Constructor[] constructor1=EagerInitialization.class.getDeclaredConstructors();
 		for (Constructor constructor : constructor1) {
 			constructor.setAccessible(true);
-			ei2=(ei)constructor.newInstance();
+			ei2=(EagerInitialization)constructor.newInstance();
 			break;
 		}
 	} catch (Exception e) {
