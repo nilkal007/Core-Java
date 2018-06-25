@@ -16,6 +16,10 @@ abstract class pizza{
 	public abstract String name();
 	public abstract String dough();
 	public abstract  String sauce();
+	public abstract  String Size();
+	public abstract  float price();
+	
+	
 	@Override
 	public String toString() {
 		return "pizza [name()=" + name() + ", dough()=" + dough() + ", sauce()=" + sauce() + "]";
@@ -27,12 +31,17 @@ class CheesePizza extends pizza{
 	String name;
 	String dough;
 	String sauce;
+	String Size;
+	 float price;
 	
-	public CheesePizza(String name, String dough, String sauce) {
+
+	public CheesePizza(String name, String dough, String sauce, String size, float price) {
 		super();
 		this.name = name;
 		this.dough = dough;
 		this.sauce = sauce;
+		this.Size = size;
+		this.price = price;
 	}
 
 	@Override
@@ -51,6 +60,18 @@ class CheesePizza extends pizza{
 	public String sauce() {
 		// TODO Auto-generated method stub
 		return this.sauce;
+	}
+
+	@Override
+	public String Size() {
+		// TODO Auto-generated method stub
+		return this.Size;
+	}
+
+	@Override
+	public float price() {
+		// TODO Auto-generated method stub
+		return this.price();
 	}
 	
 }
@@ -59,12 +80,17 @@ class PeapperoniPizza extends pizza{
 	String name;
 	String dough;
 	String sauce;
+	String Size;
+	 float price;
 	
-	public PeapperoniPizza(String name, String dough, String sauce) {
+
+	public PeapperoniPizza(String name, String dough, String sauce, String size, float price) {
 		super();
 		this.name = name;
 		this.dough = dough;
 		this.sauce = sauce;
+		this.Size = size;
+		this.price = price;
 	}
 
 	@Override
@@ -85,7 +111,18 @@ class PeapperoniPizza extends pizza{
 		return this.sauce;
 	}
 
+	@Override
+	public String Size() {
+		// TODO Auto-generated method stub
+		return this.Size;
+	}
 
+	@Override
+	public float price() {
+		// TODO Auto-generated method stub
+		return this.price();
+	}
+	
 	
 }
 class veggiePizza extends pizza{
@@ -93,12 +130,17 @@ class veggiePizza extends pizza{
 	String name;
 	String dough;
 	String sauce;
+	String Size;
+	 float price;
 	
-	public veggiePizza(String name, String dough, String sauce) {
+
+	public veggiePizza(String name, String dough, String sauce, String size, float price) {
 		super();
 		this.name = name;
 		this.dough = dough;
 		this.sauce = sauce;
+		this.Size = size;
+		this.price = price;
 	}
 
 	@Override
@@ -110,7 +152,7 @@ class veggiePizza extends pizza{
 	@Override
 	public String dough() {
 		// TODO Auto-generated method stub
-		return this.dough ;
+		return this.dough;
 	}
 
 	@Override
@@ -118,6 +160,19 @@ class veggiePizza extends pizza{
 		// TODO Auto-generated method stub
 		return this.sauce;
 	}
+
+	@Override
+	public String Size() {
+		// TODO Auto-generated method stub
+		return this.Size;
+	}
+
+	@Override
+	public float price() {
+		// TODO Auto-generated method stub
+		return this.price();
+	}
+	
 }
 	interface AbstractPizzaFactory{
 		
@@ -128,7 +183,7 @@ class CheesePizzafactory implements AbstractPizzaFactory{
 	@Override
 	public pizza getpizza() {
 		// TODO Auto-generated method stub
-		return new CheesePizza("Cheese Pizza","Regular Crust" , "Marinara Pizza Sauce");
+		return new CheesePizza("Cheese Pizza","Regular Crust" , "Marinara Pizza Sauce","Extra-large",500);
 	}
 	
 }	
@@ -137,7 +192,7 @@ class PeapperoniPizzafactory implements AbstractPizzaFactory{
 	@Override
 	public pizza getpizza() {
 		// TODO Auto-generated method stub
-		return new PeapperoniPizza("Clam Pizza", "Thin crust", "White garlic sauce");
+		return new PeapperoniPizza("Clam Pizza", "Thin crust", "White garlic sauce","large",200);
 	}
 	
 }
@@ -146,7 +201,7 @@ class veggiePizzafactory implements AbstractPizzaFactory{
 	@Override
 	public pizza getpizza() {
 		// TODO Auto-generated method stub
-		return new veggiePizza("Veggie Pizza", "Crust", "Marinara sauce");
+		return new veggiePizza("Veggie Pizza", "Crust", "Marinara sauce","Midium",100);
 	}
 	
 }
