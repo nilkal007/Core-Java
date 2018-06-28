@@ -5,7 +5,7 @@ import java.util.concurrent.BlockingQueue;
 public class TestDealyQueue {
 
 	public static void main(String[] args) {
-		BlockingQueue<Integer> integers=new DealyQueue();
+		BlockingQueue<Integer> integers=(BlockingQueue<Integer>) new DealyQueue();
 
 	}
 

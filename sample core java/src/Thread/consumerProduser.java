@@ -10,8 +10,8 @@ public class consumerProduser {
 	public static void main(String[] args) {
 		 //Creating BlockingQueue of size 10
         BlockingQueue<Message> queue = new ArrayBlockingQueue<>(10);
-        Producer producer = new Producer(queue);
-        Consumer consumer = new Consumer(queue);
+        Producer11 producer = new Producer11(queue);
+        Consumer11 consumer = new Consumer11(queue);
         //starting producer to produce messages in queue
         new Thread(producer).start();
         //starting consumer to consume messages from queue
@@ -32,11 +32,11 @@ class Message{
     }
 
 }
- class Producer implements Runnable {
+ class Producer11 implements Runnable {
 
     private BlockingQueue<Message> queue;
     
-    public Producer(BlockingQueue<Message> q){
+    public Producer11(BlockingQueue<Message> q){
         this.queue=q;
     }
     @Override
@@ -63,11 +63,11 @@ class Message{
 
 }
 
- class Consumer implements Runnable{
+ class Consumer11 implements Runnable{
 
 	 private BlockingQueue<Message> queue;
 	     
-	     public Consumer(BlockingQueue<Message> q){
+	     public Consumer11(BlockingQueue<Message> q){
 	         this.queue=q;
 	     }
 

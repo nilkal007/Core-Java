@@ -29,7 +29,7 @@ class P6 extends Thread{
 			System.out.println(i+"is waiting ");
 			
 			try {
-				boolean akn=tqi.tryTransfer(i,1, TimeUnit.SECONDS);
+				boolean akn=tqi.tryTransfer(i,3, TimeUnit.SECONDS);
 				System.out.println(akn);
 			} catch (InterruptedException e) {
 				// TODO Auto-generated catch block
@@ -61,7 +61,7 @@ class C6 extends Thread{
 	public void run() {
 		for (int i = 0; i < 5; i++) {
 			try {
-				Thread.sleep(10000);
+				Thread.sleep(2000);
 				System.out.println("consume"+tqi.take());
 				
 			} catch (InterruptedException e) {

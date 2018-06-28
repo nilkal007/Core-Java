@@ -11,7 +11,7 @@
 						return (object-type) super.clone();
 					}
  * 		--Deep 
- * 			when we modified the variable valueAfter cloning that time variable create new value address
+ * 			when we modified the variable value After cloning that time variable create new value address
  * 			when object class have child/child's class.that time  we need the also implementation clonable in that child class
  * 			  
  * 			
@@ -31,10 +31,12 @@ public class clonesample {
 		System.out.println(em1.nm==em2.nm);
 		System.out.println(em1.ad==em2.ad);
 		em2.i=20;
+		System.out.println("after set i value");
 		System.out.println(em1.i);
 		System.out.println(em2.i);
 		System.out.println(em1.i==em2.i);
 		em2.ad.city="mumbai";
+		System.out.println("after set city");
 		System.out.println(em1.ad.city);
 		System.out.println(em2.ad.city);
 		System.out.println(em1.ad.city==em2.ad.city);

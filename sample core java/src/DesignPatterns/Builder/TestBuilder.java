@@ -16,8 +16,6 @@ package DesignPatterns.Builder;
 
 import DesignPatterns.Builder.Persone.PersoneBuilder;
 
-
-
 public class TestBuilder {
 
 	public static void main(String[] args) {
@@ -68,20 +66,20 @@ public class TestBuilder {
 			this.walking = walking;
 		}
 	
-	public PersoneBuilder setCoding(String coding){
-	this.coding=coding;
-	return this;
-}
-
-public PersoneBuilder setEntertainment(String Entertainment){
-	this.Entertainment=Entertainment;
-	return this;
-}
-public Persone build() {
-	return new Persone(this);
+		public PersoneBuilder setCoding(String coding){
+			this.coding=coding;
+			return this;
+		}
 	
-}
-}	
+		public PersoneBuilder setEntertainment(String Entertainment){
+			this.Entertainment=Entertainment;
+			return this;
+		}
+		public Persone build() {
+			return new Persone(this);
+		
+		}
+	}	
 	
 	
 	
